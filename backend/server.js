@@ -1,13 +1,14 @@
 import http from 'http';
 import { Server } from 'socket.io';
 import express from 'express';
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
+import mongoose from 'mongoose';
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona');
+mongoose.connect('mongodb+srv://vagesh12:vageshVora@cluster0.prgxn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
