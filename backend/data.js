@@ -25,6 +25,17 @@ const data = {
   ],
   products: [
     {
+      name: 'PSP',
+      category: 'Gadgets',
+      image: '/images/p3.jpg',
+      price: 1200,
+      countInStock: 2,
+      brand: 'Alienware',
+      rating: 5.0,
+      numReviews: 100,
+      description: 'high quality gadget',
+    },
+    {
       name: 'Nike Slim Shirt',
       category: 'Shirts',
       image: '/images/p1.jpg',
